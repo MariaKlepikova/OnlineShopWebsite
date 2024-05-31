@@ -1,0 +1,29 @@
+﻿@using Website.Service
+
+@* <title>Two Column 2 - Minimaxing by HTML5 UP</title> *@ @* это статический заголовок *@
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+@* чтобы была возм-ть менять заголовок, нужно добавить условную конструкцию,
+если временное динамическое хранилище*@
+
+@if(ViewBag.Title != null)
+{
+	<title>@ViewBag.Title</title> @* для заголовка *@
+}
+else
+{
+	<title>@Config.CompanyName</title>
+}
+
+@* Для описания *@
+@if (ViewBag.Description != null)
+{
+	<meta name="description" content="@ViewBag.Description" />
+}
+@if (ViewBag.Keywords != null)
+{
+	<meta name="keywords" content="@ViewBag.Description" />
+}
+
